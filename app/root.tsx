@@ -1,3 +1,4 @@
+import { LinksFunction } from "@remix-run/react/routeModules";
 import {
   Links,
   LiveReload,
@@ -7,9 +8,17 @@ import {
   ScrollRestoration,
 } from "remix";
 
+import tailwindStyles from "./styles/tailwind.css";
+import appStyles from "../styles/app.css";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwindStyles },
+  { rel: "stylesheet", href: appStyles },
+];
+
 export default function App() {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <head>
         <Meta />
         <Links />
