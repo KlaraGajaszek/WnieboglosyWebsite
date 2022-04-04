@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    {
+      "name": "@zeplin/cli-connect-react-plugin",
+      "config": {
+        "tsDocgen": "react-docgen-typescript",
+        "tsConfigPath": "tsconfig.json"
+      }
+    },
+    {
+      "name": "@zeplin/cli-connect-storybook-plugin",
+      "config": {
+        "url": "http://localhost:6006",
+        "startScript": "storybook"
+      }
+    }
+  ],
+  "projects": ["624875830dd94614369f5729"],
+  "styleguides": [],
+  "components": [
+    {
+      "path": "app/components/Button/Button.tsx",
+      "zeplinIds": ["624875bfbfaf191564d6b2b5"]
+    }
+  ]
+}

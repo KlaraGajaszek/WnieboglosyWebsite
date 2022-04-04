@@ -2,5 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+/* wait for UI */
+@layer utilities {
+  .bg-primary {
+    @apply bg-blue-100;
+  }
 }
