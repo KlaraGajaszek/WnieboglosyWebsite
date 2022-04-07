@@ -28,26 +28,26 @@
 #       - name: 🔬 Lint
 #         run: npm run lint
 
-#   typecheck:
-#     name: ʦ TypeScript
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: 🛑 Cancel Previous Runs
-#         uses: styfle/cancel-workflow-action@0.9.1
+# typecheck:
+#   name: ʦ TypeScript
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: 🛑 Cancel Previous Runs
+#       uses: styfle/cancel-workflow-action@0.9.1
 
-#       - name: ⬇️ Checkout repo
-#         uses: actions/checkout@v3
+#     - name: ⬇️ Checkout repo
+#       uses: actions/checkout@v3
 
-#       - name: ⎔ Setup node
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 16
+#     - name: ⎔ Setup node
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: 16
 
-#       - name: 📥 Download deps
-#         uses: bahmutov/npm-install@v1
+#     - name: 📥 Download deps
+#       uses: bahmutov/npm-install@v1
 
-#       - name: 🔎 Type check
-#         run: npm run typecheck --if-present
+#     - name: 🔎 Type check
+#       run: npm run typecheck --if-present
 
 #   vitest:
 #     name: ⚡ Vitest
@@ -210,17 +210,23 @@ on:
   pull_request: {}
 
 jobs:
-  Explore-GitHub-Actions:
+  typecheck:
+    name: ʦ TypeScript
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🔎 Type check
+        run: npm run typecheck --if-present
