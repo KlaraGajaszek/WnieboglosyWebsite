@@ -4,7 +4,6 @@ module.exports = {
     //  wait for UI contract
     extend: {
       fontSize: {},
-      spacing: {},
     },
     colors: {
       transparent: "transparent",
