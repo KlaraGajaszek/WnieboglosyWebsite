@@ -7,11 +7,5 @@ module.exports = {
     project: ["./tsconfig.json"],
     tsconfigRootDir: __dirname,
   },
-  extends: [
-    "@remix-run/eslint-config",
-    "@remix-run/eslint-config/node",
-    "@remix-run/eslint-config/jest",
-    "prettier",
-    "plugin:storybook/recommended",
-  ],
+  extends: ["prettier", "plugin:storybook/recommended"],
 };
