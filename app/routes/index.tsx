@@ -1,9 +1,9 @@
-import { Button } from "~/components/Button";
+import { Button } from '~/components/Button';
 
-export default function Index() {
-  return (
-    <Button variant="primary" onClick={() => console.log("test")}>
-      <h1>test</h1>
-    </Button>
-  );
-}
+const Index = () => (
+  <Button variant="primary" onClick={() => console.log('test')}>
+    <h1>test</h1>
+  </Button>
+);
+
+export default Index;
