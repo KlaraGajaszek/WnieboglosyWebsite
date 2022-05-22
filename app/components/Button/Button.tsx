@@ -12,7 +12,6 @@ const getClassName = (variant: ButtonProps['variant'], className?: string) => {
     'bg-primary ': variant === 'primary',
   });
 };
-
 export const Button = ({ variant = 'primary', className, children, ...buttonProps }: ButtonProps) => {
   return (
     <button type="button" {...buttonProps} className={getClassName(variant, className)}>

@@ -16,7 +16,7 @@
     "generate:css": "npx tailwindcss -i ./styles/tailwind.css -o ./app/styles/tailwind.css",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "test": "vitest vitest --ui",
+    "test": "vitest --ui",
     "typecheck": "tsc -b",
     "validate": "run-p \"test -- --run\" lint typecheck",
     "storybook": "start-storybook -p 6006",

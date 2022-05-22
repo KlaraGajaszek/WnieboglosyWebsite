@@ -180,7 +180,7 @@ module.exports = {
         'jest/expect-expect': [
           2,
           {
-            assertFunctionNames: ['expect'],
+            assertFunctionNames: ['expect', 'screen.getByText', 'screen.getByTestId', 'screen.getByLabelText'],
           },
         ],
       },
